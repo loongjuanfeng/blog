@@ -1,9 +1,8 @@
 ---
 title: "基本 Linux 运维"
 date: 2026-07-19T15:54:07+08:00
-draft: true
+draft: false
 toc: true
-tocBorder: true
 ---
 
 也是租了很久的服务器了，也总是做“运维”（非严肃运维）相关的活，每次查都很费劲，于是总结出一些个人认为的 best practice.
