@@ -44,7 +44,7 @@ defaultContentLanguage = 'zh-cn'
     ordered    = false
 
 [params]
-  description = "记录一些数学简记。"
+  description = "记录。"
 
   [params.theme_config]
     appearance        = "auto"
