@@ -1,4 +1,4 @@
-baseURL = 'https://loongjuanfeng.github.io/'
+baseURL = 'https://loongjuanfeng.github.io/blog/'
 title = "Loongjuanfeng 的博客"
 theme = 'blog-theme'
 hasCJKLanguage = true
