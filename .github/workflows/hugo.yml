@@ -10,5 +10,5 @@ jobs:
         with:
           submodules: true
       - uses: peaceiris/actions-hugo@v3
-      - run: hugo --minify
+      - run: hugo
       - uses: peaceiris/actions-gh-pages@v4
