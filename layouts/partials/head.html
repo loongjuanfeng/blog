@@ -1,0 +1,33 @@
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {{- if .IsPage -}}
+        {{- with .Summary | plainify | strings.TrimSpace }}
+            <meta name="description" content="{{ . }}" />
+        {{- end -}}
+    {{- end }}
+
+    <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap" />
+
+    {{- with site.Params.favicon }}
+        <link rel="icon" href="{{ . | relURL }}" />
+    {{- end }}
+    {{- with resources.Get "css/main.css" }}
+        {{- $style := . | resources.Minify | resources.Fingerprint "sha512" }}
+        <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous" />
+    {{- else }}
+        {{- warnf "asset css/main.css not found" }}
+    {{- end }}
+    {{- with resources.Get "css/custom.css" }}
+        {{- $style := . | resources.Minify | resources.Fingerprint "sha512" }}
+        <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous" />
+    {{- end }}
+    {{- if or .Params.math .Params.mathjax }}
+        {{- partial "math.html" . }}
+    {{- end }}
+</head>

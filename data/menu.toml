@@ -1,0 +1,31 @@
+[[entries]]
+title = "全部笔记"
+
+  [entries.post_list]
+  limit = 10
+  show_more = true
+  show_more_text = "查看归档……"
+  show_more_url = "posts"
+
+[[entries]]
+title = "笔记分类"
+
+  [entries.post_list]
+  section = "posts"
+  show_more = true
+  show_more_text = "查看更多……"
+  show_more_url = "posts"
+
+[[entries]]
+title = "随笔"
+
+  [entries.post_list]
+  section = "notes"
+  show_more = true
+  show_more_text = "查看更多……"
+  show_more_url = "notes"
+
+[[entries]]
+title = "RSS 订阅"
+url = "index.xml"
+

@@ -1,3 +1,55 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+baseURL = 'https://loongjuanfeng.github.io/'
+title = "Loongjuanfeng 的博客"
+theme = 'blog-theme'
+hasCJKLanguage = true
+defaultContentLanguage = 'zh-cn'
+
+[languages.zh-cn]
+  locale = 'zh-CN'
+  direction = 'ltr'
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min      = "0.158.0"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+
+  [markup.highlight]
+    anchorLineNos      = false
+    codeFences         = true
+    guessSyntax        = false
+    hl_Lines           = ''
+    hl_inline          = false
+    lineAnchors        = ''
+    lineNoStart        = 1
+    lineNos            = false
+    lineNumbersInTable = true
+    noClasses          = true
+    noHl               = false
+    style              = 'rrt'
+    tabWidth           = 4
+
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel   = 3
+    ordered    = false
+
+[params]
+  description = "记录一些数学简记。"
+
+  [params.theme_config]
+    appearance        = "auto"
+    back_home_text    = ".."
+    date_format       = "2006-01-02"
+    isListGroupByDate = false
+    isShowFooter      = true
+    show_description  = false
