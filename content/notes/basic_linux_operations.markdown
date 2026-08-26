@@ -19,7 +19,7 @@ toc: true
 set -g mouse on
 ```
 
-能打开原生鼠标支持。（此后选择文本只能按着 `shift` 进行选中了）
+能打开原生鼠标支持。（此后选择文本只能按着 shift 进行选中了）
 
 对于 ESC 的拦截时间非常长，default 是 500ms.
 
@@ -30,26 +30,26 @@ set -sg escape-time 10
 
 然后要么 reboot, 要么 `tmux source-file ~/.tmux.conf`.
 
-（实际上用了 `zellij` 就没这么多事了）
+（实际上用了 zellij 就没这么多事了）
 
-# 关于无 `sudo` 的软件安装
+# 关于无 sudo 的软件安装
 
 自己 `~/.local/bin` 里面放一个 symlink, 二进制 stand-alone 或者 libs 什么的都丢进 `~/.local/share/` 里面。
 
-我一般会安装的软件是 `fish`, `btop`, `clangd`, `helix`, `zellij`, `neovim`.
+我一般会安装的软件是 fish, btop, clangd, helix, zellij, neovim.
 
-# 关于 `bash` 环境变量配置
+# 关于 bash 环境变量配置
 
 ```bash
 export PATH="/my/custom/path:$PATH"
 ```
 
-哦对了，`fish` 的 `PATH` 是这么改的
+哦对了，fish 的 PATH 是这么改的
 ```fish
 fish_add_path (pwd)
 ```
 
-我不喜欢 `bash`, 也记不住这个语法。这玩意纯上个世纪的奇妙产物，行为也很奇怪。
+我不喜欢 bash, 也记不住这个语法。这玩意纯上个世纪的奇妙产物，行为也很奇怪。
 
 # 文件解压
 `.tar.[gz,xz]` 的文件都可以 `tar -xf <TAR FILE> -C <OUTPUT DIR>`.  
@@ -59,10 +59,10 @@ fish_add_path (pwd)
 `wget -nv -P <OUTPUT DIR> <URL>`（单线程）
 
 # Git 相关
-## `.gitignore`
+## .gitignore
 支持简单的匹配，例如 `[]`, `*`, `**`.
 
-## `.gitattributes`
+## .gitattributes
 
 常用范式为
 ```gitattributes
